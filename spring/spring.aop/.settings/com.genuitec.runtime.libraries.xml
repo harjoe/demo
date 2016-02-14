@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+  <add-on id="spring.web"/>
+  <container path="com.genuitec.runtime.library/com.genuitec.spring_3.1">
+    <jar-attrs id="data/3.1/dist/org.springframework.beans-3.1.1.RELEASE.jar">
+      <attribute name="javadoc_location" value="http://static.springsource.org/spring/docs/3.1.x/javadoc-api/"/>
+      <attribute name="source-path-root"/>
+      <attribute name="source-path" value="E:\source\spring-framework-3.1.x.zip"/>
+    </jar-attrs>
+    <jar-attrs id="data/3.1/dist/org.springframework.context-3.1.1.RELEASE.jar">
+      <attribute name="javadoc_location" value="http://static.springsource.org/spring/docs/3.1.x/javadoc-api/"/>
+      <attribute name="source-path-root"/>
+      <attribute name="source-path" value="E:\source\spring-framework-3.1.x.zip"/>
+    </jar-attrs>
+    <jar-attrs id="data/3.1/dist/org.springframework.web-3.1.1.RELEASE.jar">
+      <attribute name="javadoc_location" value="http://static.springsource.org/spring/docs/3.1.x/javadoc-api/"/>
+      <attribute name="source-path-root"/>
+      <attribute name="source-path" value="E:\source\spring-framework-4.1.5.RELEASE.zip"/>
+    </jar-attrs>
+    <jar-attrs id="data/3.1/dist/org.springframework.web.servlet-3.1.1.RELEASE.jar">
+      <attribute name="javadoc_location" value="http://static.springsource.org/spring/docs/3.1.x/javadoc-api/"/>
+      <attribute name="source-path-root"/>
+      <attribute name="source-path" value="E:\source\spring-framework-3.1.x.zip"/>
+    </jar-attrs>
+  </container>
+  <container path="com.genuitec.runtime.library/com.genuitec.generic_6.0">
+    <jar-attrs id="data/libraryset/EE_6//javax.persistence.jar">
+      <attribute name="javadoc_location" value="http://java.sun.com/javaee/6/docs/api/"/>
+      <attribute name="source-path-root"/>
+      <attribute name="source-path" value="E:\source\javaee-api-7.0-sources.jar"/>
+    </jar-attrs>
+    <jar-attrs id="data/libraryset/EE_6//javax.servlet.jar">
+      <attribute name="javadoc_location" value="http://java.sun.com/javaee/6/docs/api/"/>
+      <attribute name="source-path-root"/>
+      <attribute name="source-path" value="E:\source\javaee-api-7.0-sources.jar"/>
+    </jar-attrs>
+  </container>
+</project>
