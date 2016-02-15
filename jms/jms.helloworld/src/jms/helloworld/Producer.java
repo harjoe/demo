@@ -5,7 +5,6 @@ import javax.jms.ConnectionFactory;
 import javax.jms.Destination;
 import javax.jms.JMSException;
 import javax.jms.MessageProducer;
-import javax.jms.Queue;
 import javax.jms.Session;
 import javax.jms.TextMessage;
 
@@ -32,11 +31,15 @@ public class Producer
 
 		MessageProducer messageProducer = session.createProducer(destination);
 
-		for (int i = 0; i < 10; i++) {
+		long start = System.currentTimeMillis();
+		for (int i = 0; i < 10000; i++) {
 			TextMessage message = session.createTextMessage("message " + i);
-			System.out.println("send: " + message.getText());
+			//System.out.println("send: " + message.getText());
 			messageProducer.send(message);
 		}
 		session.commit();
+		
+		long end = System.currentTimeMillis();
+		System.out.println(end-start);
 	}
 }
