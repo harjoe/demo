@@ -8,8 +8,10 @@ import redis.clients.jedis.Jedis;
 public class Test
 {
 	public static void main(String[] args) {
-		Jedis jedis = new Jedis("127.0.0.1", 6379);
+		//Jedis jedis = new Jedis("127.0.0.1", 6379);
+		Jedis jedis = new Jedis("192.168.112.133", 6379);
 
+		//jedis.flushAll();
 		/*
 		jedis.del("harjoe");
 		
@@ -23,8 +25,10 @@ public class Test
 		*/
 		
 		
-		System.out.println(jedis.get("key155"));
+		//System.out.println(jedis.get("key155"));
+		System.out.println(jedis.get("hello"));
 		
+		/*
 		long begin;
 		long end;
 		Map<String, String> map = new HashMap<String, String>(); 
@@ -47,6 +51,6 @@ public class Test
 		System.out.println(end - begin);
 		System.out.println("end test.");
 
-		
+		*/
 	}
 }
