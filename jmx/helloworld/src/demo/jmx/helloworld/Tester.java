@@ -7,7 +7,6 @@ import javax.management.MBeanServerFactory;
 import javax.management.MalformedObjectNameException;
 import javax.management.NotCompliantMBeanException;
 import javax.management.ObjectName;
-import javax.swing.JDialog;
 
 import com.sun.jdmk.comm.HtmlAdaptorServer;
 
@@ -27,9 +26,7 @@ public class Tester
 		
 		adaptorServer.start();
 		
-		JDialog dialog = new JDialog();
-		dialog.setName("bridge");
-		dialog.setVisible(true);
+	
 		
 		car.run();
 		
