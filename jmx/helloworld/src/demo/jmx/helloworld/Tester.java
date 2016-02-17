@@ -7,6 +7,7 @@ import javax.management.MBeanServerFactory;
 import javax.management.MalformedObjectNameException;
 import javax.management.NotCompliantMBeanException;
 import javax.management.ObjectName;
+import javax.swing.JDialog;
 
 import com.sun.jdmk.comm.HtmlAdaptorServer;
 
@@ -16,7 +17,9 @@ public class Tester
 		
 		MBeanServer server = MBeanServerFactory.createMBeanServer();
 		ObjectName name = new ObjectName("mylogic:name=Car");
-		server.registerMBean(new Car(), name);
+		Car car = new Car();
+		
+		server.registerMBean(car, name);
 		
 		ObjectName adapterName = new ObjectName("HelloAgent:name=htmladapter, port=8082");
 		HtmlAdaptorServer adaptorServer = new HtmlAdaptorServer();
@@ -24,7 +27,10 @@ public class Tester
 		
 		adaptorServer.start();
 		
-		Car car = new Car();
+		JDialog dialog = new JDialog();
+		dialog.setName("bridge");
+		dialog.setVisible(true);
+		
 		car.run();
 		
 		
