@@ -5,6 +5,7 @@ import javax.jms.ConnectionFactory;
 import javax.jms.Destination;
 import javax.jms.JMSException;
 import javax.jms.MessageProducer;
+import javax.jms.ObjectMessage;
 import javax.jms.Session;
 import javax.jms.TextMessage;
 
@@ -33,9 +34,11 @@ public class Producer
 
 		long start = System.currentTimeMillis();
 		for (int i = 0; i < 10000; i++) {
+			ObjectMessage objectMessage = session.createObjectMessage();
 			TextMessage message = session.createTextMessage("message " + i);
 			//System.out.println("send: " + message.getText());
 			messageProducer.send(message);
+			objectMessage.setObject(arg0);
 		}
 		session.commit();
 		

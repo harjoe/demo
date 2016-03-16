@@ -9,7 +9,7 @@ public class Test
 {
 	public static void main(String[] args) {
 		//Jedis jedis = new Jedis("127.0.0.1", 6379);
-		Jedis jedis = new Jedis("192.168.112.133", 6379);
+		Jedis jedis = new Jedis("127.0.0.1", 6379);
 
 		//jedis.flushAll();
 		/*
@@ -26,8 +26,14 @@ public class Test
 		
 		
 		//System.out.println(jedis.get("key155"));
-		System.out.println(jedis.get("hello"));
+		System.out.println(jedis.get("name"));
 		
+		
+		jedis.set("age", "2222");
+		
+		jedis.set("harjo.sex", "boy");
+		
+		System.out.println(jedis.get("harjo.sex"));
 		/*
 		long begin;
 		long end;

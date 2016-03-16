@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<application>  
+  <display-name>Hello demo</display-name>  
+  <module>  
+    <web>  
+      <web-uri>HelloWeb.war</web-uri>  
+      <context-root>/HelloWeb</context-root>  
+    </web>  
+  </module>  
+</application> 
