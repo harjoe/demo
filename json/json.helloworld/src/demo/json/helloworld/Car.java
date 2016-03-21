@@ -1,4 +1,4 @@
-package demo._for.resource;
+package demo.json.helloworld;
 
 public class Car {
 
